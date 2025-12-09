@@ -29,27 +29,33 @@ body {
 	margin: 0px auto 105px;
 	position: relative;
 }
-#header span.signboard {
-	float: right;
-	background: url(../images/schedule.gif) no-repeat;
-	display: block;
-	height: 125px;
-	width: 154px;
-	position: relative;
-	z-index: 9;
-}
-#header .tagline {
-	background: url(../images/breakfast-buffet.gif) no-repeat;
-	display: inline-block;
-	height: 80px;
-	width: 462px;
-}
 
 #infos {
 	display: inline-block;
 	width: 790px;
 	margin: 0px 0px 20px;
 	padding: 20px 0px 0px 10px;
+}
+
+#branding {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 960px;
+	margin: 0 auto;
+	padding: 20px 0;
+}
+
+#header .tagline {
+	display: inline-block;
+	height: 80px;
+	width: 462px;
+	font-family: 'DynalightRegular', cursive;
+	font-size: 60px;
+	color: #e71717;
+	text-decoration: none;
+	line-height: 80px;
+	text-align: center;
 }
 #infos li {
 	float: left;
@@ -81,13 +87,25 @@ body {
 	background-position: 0 -110px;
 	padding-left: 40px;
 }
+#infos li.template a {
+	background-color: #e71717;
+	color: #ffffff;
+	padding: 5px 15px;
+	border-radius: 5px;
+	font-weight: bold;
+	transition: background-color 0.3s ease;
+}
+#infos li.template a:hover {
+	background-color: #ff4444;
+	color: #ffffff;
+}
 
 #logo {
 	background: url(../images/Los_Pollos_Index.jpeg) no-repeat;
 	background-size: contain;
 	display: inline-block;
-	height: 100px;
-	width: 100px;
+	height: 125px;
+	width: 125px;
 	margin-right: 5px;
 }
 
@@ -145,40 +163,34 @@ body {
 	width: 960px;
 	margin: 0px;
 	padding: 0px;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
 }
 #featured li {
-	float:left;
 	list-style-type: none;
+	flex: 0 0 calc(50% - 10px);
 }
 #featured li a {
 	display: block;
+	height: 290px;
+	background-size: cover;
+	background-position: center;
 }
 #featured li.main a {
-	background: url(../images/Chicken.jpeg) no-repeat 0 0;
-	background-size: cover;
-	height: 335px;
-	width: 540px;
+	background-image: url(../images/Chicken.jpeg);
 }
 
 #featured li.drinks a {
-	background: url(../images/drinkslos.jpeg) no-repeat 0 0;
-	background-size: cover;
-	height: 335px;
-	width: 420px;
+	background-image: url(../images/drinkslos.jpeg);
 }
 
 #featured li.entree a {
-	background: url(../images/platter.jpeg) no-repeat 0 0;
-	background-size: cover;
-	height: 255px;
-	width: 540px;
+	background-image: url(../images/loschicken.jpeg);
 }
 
 #featured li.desserts a {
-	background: url(../images/churrros.jpeg) no-repeat 0 0;
-	background-size: cover;
-	height: 255px;
-	width: 420px;
+	background-image: url(../images/churrros.jpeg);
 }
 
 #contents {
