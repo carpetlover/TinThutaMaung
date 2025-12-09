@@ -1,9 +1,9 @@
 // Display welcoming pop-up message only on index page
 document.addEventListener('DOMContentLoaded', function() {
-    // Check if user has seen the welcome message before
-    const hasSeenWelcome = localStorage.getItem('hasSeenWelcome');
+    // Check if user has seen the welcome message during this session
+    const hasSeenWelcome = sessionStorage.getItem('hasSeenWelcome');
 
-    // Only show modal if user hasn't seen it before
+    // Only show modal if user hasn't seen it during this session
     if (!hasSeenWelcome) {
         // Create modal overlay
         const modalOverlay = document.createElement('div');
@@ -34,8 +34,8 @@ document.addEventListener('DOMContentLoaded', function() {
             setTimeout(function() {
                 modalOverlay.remove();
             }, 300);
-            // Mark that user has seen the welcome message
-            localStorage.setItem('hasSeenWelcome', 'true');
+            // Mark that user has seen the welcome message for this session
+            sessionStorage.setItem('hasSeenWelcome', 'true');
         });
 
         // Also close when clicking outside the modal
@@ -45,8 +45,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 setTimeout(function() {
                     modalOverlay.remove();
                 }, 300);
-                // Mark that user has seen the welcome message
-                localStorage.setItem('hasSeenWelcome', 'true');
+                // Mark that user has seen the welcome message for this session
+                sessionStorage.setItem('hasSeenWelcome', 'true');
             }
         });
     }
