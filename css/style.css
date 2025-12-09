@@ -16,10 +16,6 @@ body {
 	margin:0px;
 }
 
-#infos li.home a, #infos li.phone a, #infos li.address a,
-#footer ul.advertise li.delivery a, #footer ul.advertise li.connect a.fb, #footer ul.advertise li.connect a.twitr {
-	background: url(../images/icons.gif) no-repeat;
-}
 #navigation li a, #contents h2 {
 	background: url(../images/braces-left.gif) no-repeat;
 }
@@ -87,10 +83,11 @@ body {
 }
 
 #logo {
-	background: url(../images/logo.gif) no-repeat;
+	background: url(../images/Los_Pollos_Index.jpeg) no-repeat;
+	background-size: contain;
 	display: inline-block;
-	height: 83px;
-	width: 330px;
+	height: 100px;
+	width: 100px;
 	margin-right: 5px;
 }
 
@@ -157,39 +154,31 @@ body {
 	display: block;
 }
 #featured li.main a {
-	background: url(../images/main.jpg) no-repeat 0 0;
+	background: url(../images/Chicken.jpeg) no-repeat 0 0;
+	background-size: cover;
 	height: 335px;
 	width: 540px;
-}
-#featured li.main a:hover { 
-	background: url(../images/main-hover.jpg) no-repeat 0 0;
 }
 
 #featured li.drinks a {
-	background: url(../images/drinks.jpg) no-repeat 0 0;
+	background: url(../images/drinkslos.jpeg) no-repeat 0 0;
+	background-size: cover;
 	height: 335px;
 	width: 420px;
 }
-#featured li.drinks a:hover {
-	background: url(../images/drinks-hover.jpg) no-repeat 0 0;
-}
 
 #featured li.entree a {
-	background: url(../images/entree.jpg) no-repeat 0 0;
+	background: url(../images/platter.jpeg) no-repeat 0 0;
+	background-size: cover;
 	height: 255px;
 	width: 540px;
 }
-#featured li.entree a:hover {
-	background: url(../images/entree-hover.jpg) no-repeat 0 0;
-}
 
 #featured li.desserts a {
-	background: url(../images/desserts.jpg) no-repeat 0 0;
+	background: url(../images/churrros.jpeg) no-repeat 0 0;
+	background-size: cover;
 	height: 255px;
 	width: 420px;
-}
-#featured li.desserts a:hover {
-	background: url(../images/desserts-hover.jpg) no-repeat 0 0;
 }
 
 #contents {
@@ -375,13 +364,16 @@ body {
 
 /*------------------------- Main-course -------------------------*/
 #menus ul.main li {
-	float: left;
+	float: none;
 	list-style-type: none;
-	width: 210px;
+	width: 100%;
 	padding: 0px 10px;
 }
 #menus ul.main li ul li {
-	padding: 0;
+	float: none;
+	width: 100%;
+	padding: 10px;
+	clear: both;
 }
 
 /*------------------------- Blog Page -------------------------*/
@@ -483,7 +475,7 @@ body {
 #footer ul.advertise li.delivery a {
 	background-position: 170px 10px;
 	display: block;
-	width: 170px;
+	width: 200px;
 	padding-right: 16px;
 	padding-top: 6px;
 	text-shadow: 1px 1px 1px #252525;
